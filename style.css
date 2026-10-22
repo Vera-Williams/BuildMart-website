@@ -1,0 +1,380 @@
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #102747;
+    background-color: #ffffff;
+}
+
+/* Navigation Bar */
+.site-header {
+    min-height: 88px;
+    padding: 0 7.5%;
+    background-color: #1d3046;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ffa51f;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navigation a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 4px 10px;
+    border-bottom: 3px solid transparent;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #ffa51f;
+    border-bottom-color: #ffa51f;
+}
+
+/* Hero Section */
+.hero {
+    min-height: 397px;
+    padding: 55px 7.5%;
+
+    display: flex;
+    align-items: center;
+
+    background-color: #e8f0f8;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(235, 243, 251, 0.98) 0%,
+            rgba(235, 243, 251, 0.92) 38%,
+            rgba(235, 243, 251, 0.05) 66%
+        ),
+        url("images/building-materials-hero.jpg");
+
+    background-position: center;
+    background-size: cover;
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero h1 {
+    color: #102747;
+    font-size: 44px;
+    line-height: 1.28;
+    letter-spacing: -1px;
+    margin-bottom: 14px;
+}
+
+.hero p {
+    color: #607b9a;
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+/* Explore Products Button */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+
+    padding: 15px 27px;
+
+    color: #102747;
+    background-color: #ffa51f;
+
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #f39308;
+}
+
+.button span {
+    font-size: 25px;
+}
+
+/* Products Section */
+.products-section {
+    padding: 34px 7.5% 38px;
+    text-align: center;
+}
+
+.products-section h2 {
+    color: #102747;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.title-underline {
+    width: 62px;
+    height: 4px;
+    margin: 0 auto 32px;
+    background-color: #ffa51f;
+}
+
+/* Product Cards Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.product-card {
+    min-width: 0;
+    padding: 19px 20px 22px;
+
+    background-color: #f0f4fa;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.product-card img {
+    display: block;
+    width: 100%;
+    height: 155px;
+
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #c67a08;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.product-card p {
+    color: #172b45;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+/* About Section */
+.about-section {
+    padding: 50px 7.5%;
+    text-align: center;
+    background-color: #f0f4fa;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-section p {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Footer */
+footer {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    color: #ffffff;
+    background-color: #1d3046;
+
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Tablet Screens */
+@media (max-width: 900px) {
+
+    .site-header {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 45px 5%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-content {
+        max-width: 65%;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 560px) {
+
+    .site-header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .navigation {
+        justify-content: center;
+        gap: 12px 20px;
+    }
+
+    .navigation a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 380px;
+        padding: 35px 5%;
+
+        background-image:
+            linear-gradient(
+                rgba(235, 243, 251, 0.90),
+                rgba(235, 243, 251, 0.90)
+            ),
+            url("images/building-materials-hero.jpg");
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .products-section {
+        padding: 30px 5%;
+    }
+
+    .products-section h2 {
+        font-size: 32px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-card img {
+        height: 200px;
+    }
+
+    .product-card p {
+        font-size: 15px;
+    }
+}
+
+
+
+
+/* Contact Section */
+.contact-section {
+    padding: 50px 7.5%;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+    color: #102747;
+    margin-bottom: 15px;
+}
+
+.contact-section > p {
+    font-size: 17px;
+    color: #607b9a;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    background-color: #f0f4fa;
+    padding: 25px;
+    border-radius: 10px;
+    width: 280px;
+}
+
+.contact-item h3 {
+    color: #c67a08;
+    margin-bottom: 12px;
+}
+
+.contact-item p {
+    color: #102747;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.contact-button:hover {
+    background-color: #1da851;
+}
